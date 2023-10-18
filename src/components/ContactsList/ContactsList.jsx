@@ -1,13 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 
-import {
-  getContacts,
-  getError,
-  getFilter,
-  getFilteredContacts,
-  getIsLoading,
-} from 'redux/selectors';
-import { deleteContact } from 'redux/operations';
+import { deleteContact } from 'redux/contacts/operations';
+import { getContacts, getError, getIsLoading } from 'redux/contacts/selectors';
+import { getFilter, getFilteredContacts } from 'redux/filter/selectors';
 
 import { toast } from 'react-toastify';
 

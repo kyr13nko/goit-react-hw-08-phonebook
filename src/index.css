@@ -36,8 +36,3 @@ img {
   object-fit: cover;
   object-position: center;
 }
-
-#root {
-  display: flex;
-  justify-content: center;
-}
