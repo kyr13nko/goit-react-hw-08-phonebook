@@ -8,6 +8,4 @@ export const Container = styled.div`
   width: 500px;
 
   color: #010101;
-
-  padding: 20px;
 `;
