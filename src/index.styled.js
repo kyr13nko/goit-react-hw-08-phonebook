@@ -1,5 +1,28 @@
 import { styled } from 'styled-components';
 
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  width: 400px;
+
+  color: #010101;
+`;
+
+export const Block = styled.div`
+  box-shadow: 0px 20px 0px -18px rgba(84, 76, 122, 1),
+    0px 18px 0px -16px rgba(57, 95, 58, 1);
+  padding-bottom: 16px;
+`;
+
+export const Title = styled.h2`
+  text-transform: uppercase;
+  text-align: center;
+
+  margin-bottom: 8px;
+`;
+
 export const Form = styled.form`
   display: flex;
   flex-direction: column;

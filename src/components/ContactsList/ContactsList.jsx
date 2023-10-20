@@ -8,6 +8,7 @@ import { toast } from 'react-toastify';
 
 import { List, Item, ContactValue, Button } from './ContactsList.styled';
 import Loader from 'components/Loader/Loader';
+import { Block, Title } from 'index.styled';
 
 const ContactsList = () => {
   const dispatch = useDispatch();
@@ -24,14 +25,14 @@ const ContactsList = () => {
   };
 
   return (
-    <>
+    <Block>
       {isLoading ? (
         <Loader />
       ) : (
         <>
           {!error && contacts.length > 0 && (
             <>
-              <h2>Contacts:</h2>
+              <Title>Contacts:</Title>
               <List>
                 {filteredContacts.map(({ id, name, number }) => {
                   return (
@@ -72,7 +73,7 @@ const ContactsList = () => {
           )}
         </>
       )}
-    </>
+    </Block>
   );
 };
 

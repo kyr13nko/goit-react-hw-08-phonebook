@@ -9,7 +9,7 @@ import ContactsList from 'components/ContactsList/ContactsList';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
-import { Container } from './Contacts.styled';
+import { Container } from 'index.styled';
 import { getContacts } from 'redux/contacts/selectors';
 
 const Contacts = () => {

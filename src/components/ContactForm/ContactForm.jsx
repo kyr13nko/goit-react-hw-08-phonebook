@@ -5,7 +5,7 @@ import { addContact } from 'redux/contacts/operations';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
-import { Button, Form, Input, Label } from './ContactForm.styled';
+import { Block, Button, Form, Input, Label, Title } from 'index.styled';
 
 const ContactForm = () => {
   const contacts = useSelector(getContacts);
@@ -33,8 +33,8 @@ const ContactForm = () => {
     event.target.reset();
   };
   return (
-    <>
-      <h2>Add new contact:</h2>
+    <Block>
+      <Title>Add new contact:</Title>
       <Form onSubmit={onFormSubmit}>
         <Label>
           Name
@@ -58,7 +58,7 @@ const ContactForm = () => {
         </Label>
         <Button type="submit">Add contact</Button>
       </Form>
-    </>
+    </Block>
   );
 };
 
