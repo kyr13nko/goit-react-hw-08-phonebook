@@ -7,10 +7,10 @@ import {
   Label,
   Title,
 } from 'index.styled';
-import { useDispatch } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 
 const Login = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const handleSubmit = e => {
     e.preventDefault();
