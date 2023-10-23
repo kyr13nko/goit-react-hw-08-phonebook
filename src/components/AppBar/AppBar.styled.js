@@ -44,6 +44,10 @@ export const StyledLink = styled(NavLink)`
   }
 `;
 
+export const User = styled.p`
+  font-weight: 500;
+`;
+
 export const LogoutButton = styled.button`
   cursor: pointer;
   background-color: transparent;

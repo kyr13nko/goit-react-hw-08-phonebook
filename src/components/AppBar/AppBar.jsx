@@ -9,7 +9,7 @@ const AppBar = () => {
       <Header>
         <Navigation />
         <UserMenu />
-        <AuthNav />
+        {/* <AuthNav /> */}
       </Header>
     </>
   );
