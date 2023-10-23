@@ -1,21 +1,30 @@
 import { Block, Button, Form, Input, Label, Title } from 'index.styled';
 import { useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
 import { logIn } from 'redux/auth/operations';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
     const form = e.currentTarget;
-    dispatch(
-      logIn({
-        email: form.elements.email.value,
-        password: form.elements.password.value,
-      })
-    );
+
+    try {
+      await dispatch(
+        logIn({
+          email: form.elements.email.value,
+          password: form.elements.password.value,
+        })
+      ).unwrap();
+      toast.success('Welcome!');
+    } catch (error) {
+      console.log('error', error);
+      toast.error('Wrong email or password! Please try again!');
+    }
     form.reset();
   };
+
   return (
     <Block>
       <Title>Login:</Title>

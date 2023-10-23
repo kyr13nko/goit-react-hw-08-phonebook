@@ -1,20 +1,29 @@
 import { Block, Button, Form, Input, Label, Title } from 'index.styled';
 import { useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
 import { register } from 'redux/auth/operations';
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
     const form = e.currentTarget;
-    dispatch(
-      register({
-        name: form.elements.name.value,
-        email: form.elements.email.value,
-        password: form.elements.password.value,
-      })
-    );
+
+    try {
+      await dispatch(
+        register({
+          name: form.elements.name.value,
+          email: form.elements.email.value,
+          password: form.elements.password.value,
+        })
+      ).unwrap();
+      toast.success('Welcome!');
+    } catch (error) {
+      console.log('error', error);
+      toast.error('Your email is already registered! Please try again!');
+    }
+
     form.reset();
   };
 
