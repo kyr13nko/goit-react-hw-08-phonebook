@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   gap: 36px;
 
-  width: 400px;
+  width: 450px;
 
   color: #010101;
 `;
