@@ -44,7 +44,9 @@ const App = () => {
           />
           <Route
             path="contacts"
-            element={<PrivateRoute redirectTo="/" component={<Contacts />} />}
+            element={
+              <PrivateRoute redirectTo="/login" component={<Contacts />} />
+            }
           />
         </Route>
       </Routes>
